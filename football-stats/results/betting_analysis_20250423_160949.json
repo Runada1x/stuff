@@ -1,0 +1,1481 @@
+{
+  "selections": [
+    {
+      "player": "survien timber",
+      "match": null,
+      "bet_type": "2+",
+      "original_text": "survien timber: 2+"
+    },
+    {
+      "player": "ethan nwaneri",
+      "match": null,
+      "bet_type": "Player Shots",
+      "original_text": "ethan nwaneri: 1+ shots"
+    },
+    {
+      "player": "commit",
+      "match": null,
+      "bet_type": "Player Fouls",
+      "count": "1+",
+      "original_text": "commit 1+ fouls"
+    },
+    {
+      "player": "tsmaita sarr",
+      "match": null,
+      "bet_type": "Player Shots",
+      "original_text": "tsmaita sarr: 14 shots"
+    },
+    {
+      "player": "eddie nketiah",
+      "match": null,
+      "bet_type": "1\u00a2 shots",
+      "original_text": "eddie nketiah: 1\u00a2 shots"
+    },
+    {
+      "player": "martin odegaard",
+      "match": null,
+      "bet_type": "1+",
+      "original_text": "martin odegaard: 1+"
+    },
+    {
+      "player": "ethan nwaneri",
+      "match": null,
+      "bet_type": "Player Shots",
+      "original_text": "ethan nwaneri: 1+ shots"
+    },
+    {
+      "player": "commit",
+      "match": null,
+      "bet_type": "Player Fouls",
+      "count": "1+",
+      "original_text": "commit 1+ fouls\u00bb"
+    },
+    {
+      "player": "ismaila sarr",
+      "match": null,
+      "bet_type": "Player Shots",
+      "original_text": "ismaila sarr: 14 shots"
+    },
+    {
+      "player": "martin odegaard",
+      "match": null,
+      "bet_type": "1",
+      "original_text": "martin odegaard: 1"
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Away Win",
+      "original_text": "29.00"
+    },
+    {
+      "player": "a timber",
+      "match": "arsanal vs crystal",
+      "bet_type": "2+",
+      "original_text": "a timber: 2+"
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Tackles",
+      "original_text": "tackles +"
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Tackles",
+      "original_text": "player tackles"
+    },
+    {
+      "player": "ethan nwaneri",
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Shots",
+      "original_text": "ethan nwaneri: 1+ shots"
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Shots",
+      "original_text": "player shots on target"
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Home Win",
+      "original_text": "commit 1+ fouls\u00bb"
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Fouls",
+      "original_text": "player fouls committed"
+    },
+    {
+      "player": "ismaila sarr",
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Shots",
+      "original_text": "ismaila sarr: 14 shots"
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Shots",
+      "original_text": "player shots"
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Home Win",
+      "original_text": "eddie nketiah; 1# shots."
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Shots",
+      "original_text": "player shots"
+    },
+    {
+      "player": "martin odegaard",
+      "match": "arsanal vs crystal",
+      "bet_type": "1",
+      "original_text": "martin odegaard: 1"
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Shots",
+      "original_text": "player shote"
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "BTTS",
+      "original_text": "both teams to score"
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "BTTS",
+      "original_text": "both teams to score"
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Draw",
+      "original_text": "--- next configuration ---"
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Away Win",
+      "original_text": "arsanalvcrystat \u2014 29.00 stake"
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Tackles",
+      "original_text": "tackles +"
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Tackles",
+      "original_text": "player tackles"
+    },
+    {
+      "player": "ethan nwaneri",
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Shots",
+      "original_text": "ethan nwaneri: 1+ shots"
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Shots",
+      "original_text": "player shots on target"
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Home Win",
+      "original_text": "commit 1+ fouls\u00bb"
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Fouls",
+      "original_text": "player fouls committed"
+    },
+    {
+      "player": "ismaila sarr",
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Shots",
+      "original_text": "ismaila sarr: 14 shots"
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Shots",
+      "original_text": "player shots"
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Home Win",
+      "original_text": "eddie nketiah; 1# shots."
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Shots",
+      "original_text": "player shots"
+    },
+    {
+      "player": "martin odegaard",
+      "match": "arsanal vs crystal",
+      "bet_type": "1",
+      "original_text": "martin odegaard: 1"
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Shots",
+      "original_text": "player shote"
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "BTTS",
+      "original_text": "both teams to score"
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "BTTS",
+      "original_text": "both teams to score"
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Draw",
+      "original_text": "--- next configuration ---"
+    }
+  ],
+  "analyses": [
+    {
+      "match": "Unknown Match",
+      "bet_type": "2+",
+      "error": "Could not parse team names",
+      "success_rate": null,
+      "historical_matches": []
+    },
+    {
+      "match": "Unknown Match",
+      "bet_type": "Player Shots",
+      "error": "Could not parse team names",
+      "success_rate": null,
+      "historical_matches": []
+    },
+    {
+      "match": "Unknown Match",
+      "bet_type": "Player Fouls",
+      "error": "Could not parse team names",
+      "success_rate": null,
+      "historical_matches": []
+    },
+    {
+      "match": "Unknown Match",
+      "bet_type": "Player Shots",
+      "error": "Could not parse team names",
+      "success_rate": null,
+      "historical_matches": []
+    },
+    {
+      "match": "Unknown Match",
+      "bet_type": "1\u00a2 shots",
+      "error": "Could not parse team names",
+      "success_rate": null,
+      "historical_matches": []
+    },
+    {
+      "match": "Unknown Match",
+      "bet_type": "1+",
+      "error": "Could not parse team names",
+      "success_rate": null,
+      "historical_matches": []
+    },
+    {
+      "match": "Unknown Match",
+      "bet_type": "Player Shots",
+      "error": "Could not parse team names",
+      "success_rate": null,
+      "historical_matches": []
+    },
+    {
+      "match": "Unknown Match",
+      "bet_type": "Player Fouls",
+      "error": "Could not parse team names",
+      "success_rate": null,
+      "historical_matches": []
+    },
+    {
+      "match": "Unknown Match",
+      "bet_type": "Player Shots",
+      "error": "Could not parse team names",
+      "success_rate": null,
+      "historical_matches": []
+    },
+    {
+      "match": "Unknown Match",
+      "bet_type": "1",
+      "error": "Could not parse team names",
+      "success_rate": null,
+      "historical_matches": []
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Away Win",
+      "success_rate": 0.2,
+      "historical_matches": [
+        {
+          "date": "2024-05-19",
+          "opponent": "Aston Villa",
+          "score": {
+            "home": 5,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-05-11",
+          "opponent": "Wolves",
+          "score": {
+            "home": 1,
+            "away": 3
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-05-06",
+          "opponent": "Manchester United",
+          "score": {
+            "home": 4,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-04-27",
+          "opponent": "Fulham",
+          "score": {
+            "home": 1,
+            "away": 1
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-04-24",
+          "opponent": "Newcastle",
+          "score": {
+            "home": 2,
+            "away": 0
+          },
+          "is_home": true
+        }
+      ]
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "2+",
+      "success_rate": 0.0,
+      "historical_matches": [
+        {
+          "date": "2024-05-19",
+          "opponent": "Aston Villa",
+          "score": {
+            "home": 5,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-05-11",
+          "opponent": "Wolves",
+          "score": {
+            "home": 1,
+            "away": 3
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-05-06",
+          "opponent": "Manchester United",
+          "score": {
+            "home": 4,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-04-27",
+          "opponent": "Fulham",
+          "score": {
+            "home": 1,
+            "away": 1
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-04-24",
+          "opponent": "Newcastle",
+          "score": {
+            "home": 2,
+            "away": 0
+          },
+          "is_home": true
+        }
+      ]
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Tackles",
+      "success_rate": 0.0,
+      "historical_matches": [
+        {
+          "date": "2024-05-19",
+          "opponent": "Aston Villa",
+          "score": {
+            "home": 5,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-05-11",
+          "opponent": "Wolves",
+          "score": {
+            "home": 1,
+            "away": 3
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-05-06",
+          "opponent": "Manchester United",
+          "score": {
+            "home": 4,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-04-27",
+          "opponent": "Fulham",
+          "score": {
+            "home": 1,
+            "away": 1
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-04-24",
+          "opponent": "Newcastle",
+          "score": {
+            "home": 2,
+            "away": 0
+          },
+          "is_home": true
+        }
+      ]
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Tackles",
+      "success_rate": 0.0,
+      "historical_matches": [
+        {
+          "date": "2024-05-19",
+          "opponent": "Aston Villa",
+          "score": {
+            "home": 5,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-05-11",
+          "opponent": "Wolves",
+          "score": {
+            "home": 1,
+            "away": 3
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-05-06",
+          "opponent": "Manchester United",
+          "score": {
+            "home": 4,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-04-27",
+          "opponent": "Fulham",
+          "score": {
+            "home": 1,
+            "away": 1
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-04-24",
+          "opponent": "Newcastle",
+          "score": {
+            "home": 2,
+            "away": 0
+          },
+          "is_home": true
+        }
+      ]
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Shots",
+      "success_rate": 0.0,
+      "historical_matches": [
+        {
+          "date": "2024-05-19",
+          "opponent": "Aston Villa",
+          "score": {
+            "home": 5,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-05-11",
+          "opponent": "Wolves",
+          "score": {
+            "home": 1,
+            "away": 3
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-05-06",
+          "opponent": "Manchester United",
+          "score": {
+            "home": 4,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-04-27",
+          "opponent": "Fulham",
+          "score": {
+            "home": 1,
+            "away": 1
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-04-24",
+          "opponent": "Newcastle",
+          "score": {
+            "home": 2,
+            "away": 0
+          },
+          "is_home": true
+        }
+      ]
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Shots",
+      "success_rate": 0.0,
+      "historical_matches": [
+        {
+          "date": "2024-05-19",
+          "opponent": "Aston Villa",
+          "score": {
+            "home": 5,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-05-11",
+          "opponent": "Wolves",
+          "score": {
+            "home": 1,
+            "away": 3
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-05-06",
+          "opponent": "Manchester United",
+          "score": {
+            "home": 4,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-04-27",
+          "opponent": "Fulham",
+          "score": {
+            "home": 1,
+            "away": 1
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-04-24",
+          "opponent": "Newcastle",
+          "score": {
+            "home": 2,
+            "away": 0
+          },
+          "is_home": true
+        }
+      ]
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Home Win",
+      "success_rate": 0.6,
+      "historical_matches": [
+        {
+          "date": "2024-05-19",
+          "opponent": "Aston Villa",
+          "score": {
+            "home": 5,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-05-11",
+          "opponent": "Wolves",
+          "score": {
+            "home": 1,
+            "away": 3
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-05-06",
+          "opponent": "Manchester United",
+          "score": {
+            "home": 4,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-04-27",
+          "opponent": "Fulham",
+          "score": {
+            "home": 1,
+            "away": 1
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-04-24",
+          "opponent": "Newcastle",
+          "score": {
+            "home": 2,
+            "away": 0
+          },
+          "is_home": true
+        }
+      ]
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Fouls",
+      "success_rate": 0.0,
+      "historical_matches": [
+        {
+          "date": "2024-05-19",
+          "opponent": "Aston Villa",
+          "score": {
+            "home": 5,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-05-11",
+          "opponent": "Wolves",
+          "score": {
+            "home": 1,
+            "away": 3
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-05-06",
+          "opponent": "Manchester United",
+          "score": {
+            "home": 4,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-04-27",
+          "opponent": "Fulham",
+          "score": {
+            "home": 1,
+            "away": 1
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-04-24",
+          "opponent": "Newcastle",
+          "score": {
+            "home": 2,
+            "away": 0
+          },
+          "is_home": true
+        }
+      ]
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Shots",
+      "success_rate": 0.0,
+      "historical_matches": [
+        {
+          "date": "2024-05-19",
+          "opponent": "Aston Villa",
+          "score": {
+            "home": 5,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-05-11",
+          "opponent": "Wolves",
+          "score": {
+            "home": 1,
+            "away": 3
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-05-06",
+          "opponent": "Manchester United",
+          "score": {
+            "home": 4,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-04-27",
+          "opponent": "Fulham",
+          "score": {
+            "home": 1,
+            "away": 1
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-04-24",
+          "opponent": "Newcastle",
+          "score": {
+            "home": 2,
+            "away": 0
+          },
+          "is_home": true
+        }
+      ]
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Shots",
+      "success_rate": 0.0,
+      "historical_matches": [
+        {
+          "date": "2024-05-19",
+          "opponent": "Aston Villa",
+          "score": {
+            "home": 5,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-05-11",
+          "opponent": "Wolves",
+          "score": {
+            "home": 1,
+            "away": 3
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-05-06",
+          "opponent": "Manchester United",
+          "score": {
+            "home": 4,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-04-27",
+          "opponent": "Fulham",
+          "score": {
+            "home": 1,
+            "away": 1
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-04-24",
+          "opponent": "Newcastle",
+          "score": {
+            "home": 2,
+            "away": 0
+          },
+          "is_home": true
+        }
+      ]
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Home Win",
+      "success_rate": 0.6,
+      "historical_matches": [
+        {
+          "date": "2024-05-19",
+          "opponent": "Aston Villa",
+          "score": {
+            "home": 5,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-05-11",
+          "opponent": "Wolves",
+          "score": {
+            "home": 1,
+            "away": 3
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-05-06",
+          "opponent": "Manchester United",
+          "score": {
+            "home": 4,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-04-27",
+          "opponent": "Fulham",
+          "score": {
+            "home": 1,
+            "away": 1
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-04-24",
+          "opponent": "Newcastle",
+          "score": {
+            "home": 2,
+            "away": 0
+          },
+          "is_home": true
+        }
+      ]
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Shots",
+      "success_rate": 0.0,
+      "historical_matches": [
+        {
+          "date": "2024-05-19",
+          "opponent": "Aston Villa",
+          "score": {
+            "home": 5,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-05-11",
+          "opponent": "Wolves",
+          "score": {
+            "home": 1,
+            "away": 3
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-05-06",
+          "opponent": "Manchester United",
+          "score": {
+            "home": 4,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-04-27",
+          "opponent": "Fulham",
+          "score": {
+            "home": 1,
+            "away": 1
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-04-24",
+          "opponent": "Newcastle",
+          "score": {
+            "home": 2,
+            "away": 0
+          },
+          "is_home": true
+        }
+      ]
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "1",
+      "success_rate": 0.0,
+      "historical_matches": [
+        {
+          "date": "2024-05-19",
+          "opponent": "Aston Villa",
+          "score": {
+            "home": 5,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-05-11",
+          "opponent": "Wolves",
+          "score": {
+            "home": 1,
+            "away": 3
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-05-06",
+          "opponent": "Manchester United",
+          "score": {
+            "home": 4,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-04-27",
+          "opponent": "Fulham",
+          "score": {
+            "home": 1,
+            "away": 1
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-04-24",
+          "opponent": "Newcastle",
+          "score": {
+            "home": 2,
+            "away": 0
+          },
+          "is_home": true
+        }
+      ]
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Shots",
+      "success_rate": 0.0,
+      "historical_matches": [
+        {
+          "date": "2024-05-19",
+          "opponent": "Aston Villa",
+          "score": {
+            "home": 5,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-05-11",
+          "opponent": "Wolves",
+          "score": {
+            "home": 1,
+            "away": 3
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-05-06",
+          "opponent": "Manchester United",
+          "score": {
+            "home": 4,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-04-27",
+          "opponent": "Fulham",
+          "score": {
+            "home": 1,
+            "away": 1
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-04-24",
+          "opponent": "Newcastle",
+          "score": {
+            "home": 2,
+            "away": 0
+          },
+          "is_home": true
+        }
+      ]
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "BTTS",
+      "success_rate": 0.4,
+      "historical_matches": [
+        {
+          "date": "2024-05-19",
+          "opponent": "Aston Villa",
+          "score": {
+            "home": 5,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-05-11",
+          "opponent": "Wolves",
+          "score": {
+            "home": 1,
+            "away": 3
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-05-06",
+          "opponent": "Manchester United",
+          "score": {
+            "home": 4,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-04-27",
+          "opponent": "Fulham",
+          "score": {
+            "home": 1,
+            "away": 1
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-04-24",
+          "opponent": "Newcastle",
+          "score": {
+            "home": 2,
+            "away": 0
+          },
+          "is_home": true
+        }
+      ]
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "BTTS",
+      "success_rate": 0,
+      "historical_matches": []
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Draw",
+      "success_rate": 0,
+      "historical_matches": []
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Away Win",
+      "success_rate": 0,
+      "historical_matches": []
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Tackles",
+      "success_rate": 0.0,
+      "historical_matches": [
+        {
+          "date": "2024-05-19",
+          "opponent": "Aston Villa",
+          "score": {
+            "home": 5,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-05-11",
+          "opponent": "Wolves",
+          "score": {
+            "home": 1,
+            "away": 3
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-05-06",
+          "opponent": "Manchester United",
+          "score": {
+            "home": 4,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-04-27",
+          "opponent": "Fulham",
+          "score": {
+            "home": 1,
+            "away": 1
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-04-24",
+          "opponent": "Newcastle",
+          "score": {
+            "home": 2,
+            "away": 0
+          },
+          "is_home": true
+        }
+      ]
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Tackles",
+      "success_rate": 0.0,
+      "historical_matches": [
+        {
+          "date": "2024-05-19",
+          "opponent": "Aston Villa",
+          "score": {
+            "home": 5,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-05-11",
+          "opponent": "Wolves",
+          "score": {
+            "home": 1,
+            "away": 3
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-05-06",
+          "opponent": "Manchester United",
+          "score": {
+            "home": 4,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-04-27",
+          "opponent": "Fulham",
+          "score": {
+            "home": 1,
+            "away": 1
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-04-24",
+          "opponent": "Newcastle",
+          "score": {
+            "home": 2,
+            "away": 0
+          },
+          "is_home": true
+        }
+      ]
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Shots",
+      "success_rate": 0,
+      "historical_matches": []
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Shots",
+      "success_rate": 0,
+      "historical_matches": []
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Home Win",
+      "success_rate": 0,
+      "historical_matches": []
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Fouls",
+      "success_rate": 0.0,
+      "historical_matches": [
+        {
+          "date": "2024-05-19",
+          "opponent": "Aston Villa",
+          "score": {
+            "home": 5,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-05-11",
+          "opponent": "Wolves",
+          "score": {
+            "home": 1,
+            "away": 3
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-05-06",
+          "opponent": "Manchester United",
+          "score": {
+            "home": 4,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-04-27",
+          "opponent": "Fulham",
+          "score": {
+            "home": 1,
+            "away": 1
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-04-24",
+          "opponent": "Newcastle",
+          "score": {
+            "home": 2,
+            "away": 0
+          },
+          "is_home": true
+        }
+      ]
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Shots",
+      "success_rate": 0.0,
+      "historical_matches": [
+        {
+          "date": "2024-05-19",
+          "opponent": "Aston Villa",
+          "score": {
+            "home": 5,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-05-11",
+          "opponent": "Wolves",
+          "score": {
+            "home": 1,
+            "away": 3
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-05-06",
+          "opponent": "Manchester United",
+          "score": {
+            "home": 4,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-04-27",
+          "opponent": "Fulham",
+          "score": {
+            "home": 1,
+            "away": 1
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-04-24",
+          "opponent": "Newcastle",
+          "score": {
+            "home": 2,
+            "away": 0
+          },
+          "is_home": true
+        }
+      ]
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Shots",
+      "success_rate": 0,
+      "historical_matches": []
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Home Win",
+      "success_rate": 0,
+      "historical_matches": []
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Shots",
+      "success_rate": 0,
+      "historical_matches": []
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "1",
+      "success_rate": 0.0,
+      "historical_matches": [
+        {
+          "date": "2024-05-19",
+          "opponent": "Aston Villa",
+          "score": {
+            "home": 5,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-05-11",
+          "opponent": "Wolves",
+          "score": {
+            "home": 1,
+            "away": 3
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-05-06",
+          "opponent": "Manchester United",
+          "score": {
+            "home": 4,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-04-27",
+          "opponent": "Fulham",
+          "score": {
+            "home": 1,
+            "away": 1
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-04-24",
+          "opponent": "Newcastle",
+          "score": {
+            "home": 2,
+            "away": 0
+          },
+          "is_home": true
+        }
+      ]
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Player Shots",
+      "success_rate": 0.0,
+      "historical_matches": [
+        {
+          "date": "2024-05-19",
+          "opponent": "Aston Villa",
+          "score": {
+            "home": 5,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-05-11",
+          "opponent": "Wolves",
+          "score": {
+            "home": 1,
+            "away": 3
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-05-06",
+          "opponent": "Manchester United",
+          "score": {
+            "home": 4,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-04-27",
+          "opponent": "Fulham",
+          "score": {
+            "home": 1,
+            "away": 1
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-04-24",
+          "opponent": "Newcastle",
+          "score": {
+            "home": 2,
+            "away": 0
+          },
+          "is_home": true
+        }
+      ]
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "BTTS",
+      "success_rate": 0,
+      "historical_matches": []
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "BTTS",
+      "success_rate": 0,
+      "historical_matches": []
+    },
+    {
+      "match": "arsanal vs crystal",
+      "bet_type": "Draw",
+      "success_rate": 0,
+      "historical_matches": []
+    }
+  ],
+  "summary": {
+    "total_selections": 43,
+    "successful_selections": 2,
+    "unsuccessful_selections": 31,
+    "avg_success_rate": 0.046511627906976744
+  },
+  "generated": "2025-04-23 16:03:18"
+}

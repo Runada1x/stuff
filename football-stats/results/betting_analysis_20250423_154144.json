@@ -1,0 +1,70 @@
+{
+  "selections": [
+    {
+      "match": "arsenal vs manchester btts yes",
+      "bet_type": "BTTS",
+      "original_text": "arsenal vs manchester btts yes"
+    }
+  ],
+  "analyses": [
+    {
+      "match": "arsenal vs manchester btts yes",
+      "bet_type": "BTTS",
+      "success_rate": 0.4,
+      "historical_matches": [
+        {
+          "date": "2024-05-19",
+          "opponent": "Everton",
+          "score": {
+            "home": 2,
+            "away": 1
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-05-12",
+          "opponent": "Manchester United",
+          "score": {
+            "home": 0,
+            "away": 1
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-05-04",
+          "opponent": "Bournemouth",
+          "score": {
+            "home": 3,
+            "away": 0
+          },
+          "is_home": true
+        },
+        {
+          "date": "2024-04-28",
+          "opponent": "Tottenham",
+          "score": {
+            "home": 2,
+            "away": 3
+          },
+          "is_home": false
+        },
+        {
+          "date": "2024-04-23",
+          "opponent": "Chelsea",
+          "score": {
+            "home": 5,
+            "away": 0
+          },
+          "is_home": true
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_selections": 1,
+    "successful_selections": 0,
+    "unsuccessful_selections": 1,
+    "avg_success_rate": 0.0
+  },
+  "generated": "2025-04-23 15:41:37"
+}

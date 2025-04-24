@@ -1,0 +1,10 @@
+===== BETTING SLIP ANALYSIS =====
+Generated: 2025-04-23 15:47:14
+
+===== SUMMARY =====
+Total Selections: 0
+Successful Selections: 0
+Unsuccessful Selections: 0
+Average Success Rate: 0.0%
+
+===== SELECTION ANALYSES =====

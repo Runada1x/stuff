@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Betting Analysis Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Betting Slip Analysis Results</h1>
+        
+        <div class="summary-box">
+            <h2>Summary</h2>
+            <p>Total Selections: {{ summary.total_selections }}</p>
+            <p>Successful Selections: {{ summary.successful_selections }}</p>
+            <p>Unsuccessful Selections: {{ summary.unsuccessful_selections }}</p>
+            <p>Average Success Rate: {{ "%.1f"|format(summary.avg_success_rate * 100) }}%</p>
+        </div>
+        
+        <h2>Original Slip</h2>
+        <div class="slip-image">
+            <img src="{{ url_for('uploaded_file', filename=uploaded_file) }}" alt="Uploaded betting slip">
+        </div>
+        
+        <h2>Analysis Results</h2>
+        {% if analyses %}
+        {% for analysis in analyses %}
+        <div class="selection-box {% if analysis.success_rate >= 0.6 %}good{% else %}bad{% endif %}">
+            <h3>{{ analysis.match }} - {{ analysis.bet_type }}</h3>
+            {% if analysis.error %}
+            <p>Error: {{ analysis.error }}</p>
+            {% else %}
+            <p>Success Rate: {{ "%.1f"|format(analysis.success_rate * 100) }}%</p>
+            
+            {% if analysis.historical_matches %}
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Opponent</th>
+                    <th>Result</th>
+                    <th>Bet Result</th>
+                </tr>
+                {% for match in analysis.historical_matches %}
+                <tr>
+                    <td>{{ match.date }}</td>
+                    <td>{{ match.opponent }}</td>
+                    <td>{{ match.score.home }}-{{ match.score.away }}</td>
+                    <td class="{% if analysis.bet_would_win(match) %}win{% else %}loss{% endif %}">
+                        {{ "Win" if analysis.bet_would_win(match) else "Loss" }}
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+            {% else %}
+            <p>No historical match data available</p>
+            {% endif %}
+            {% endif %}
+        </div>
+        {% endfor %}
+        {% else %}
+        <p>No analysis results available.</p>
+        {% endif %}
+        
+        <div class="visualization">
+            <h2>Visualization</h2>
+            <img src="{{ url_for('uploaded_file', filename=viz_image) }}" alt="Analysis visualization">
+        </div>
+        
+        <div class="actions">
+            <a href="{{ url_for('index') }}" class="button">Analyze Another Slip</a>
+        </div>
+        
+        <div class="footer">
+            <p>Powered by Football Stats API</p>
+        </div>
+    </div>
+</body>
+</html>

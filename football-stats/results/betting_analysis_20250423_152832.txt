@@ -1,0 +1,19 @@
+===== BETTING SLIP ANALYSIS =====
+Generated: 2025-04-23 15:28:26
+
+===== SUMMARY =====
+Total Selections: 1
+Successful Selections: 0
+Unsuccessful Selections: 1
+Average Success Rate: 0.0%
+
+===== SELECTION ANALYSES =====
+Selection 1: arsenal vs manchester btts yes - BTTS
+  Success Rate: 40.0%
+  Historical Matches:
+    2024-05-19: Everton 2-1
+    2024-05-12: Manchester United 0-1
+    2024-05-04: Bournemouth 3-0
+    2024-04-28: Tottenham 2-3
+    2024-04-23: Chelsea 5-0
+

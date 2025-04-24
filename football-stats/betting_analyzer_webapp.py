@@ -2,10 +2,12 @@ import os
 import sys
 import uuid
 import shutil
-from flask import Flask, request, render_template, redirect, url_for, send_from_directory
+import logging
+from flask import Flask, request, render_template, redirect, url_for, send_from_directory, flash
 from werkzeug.utils import secure_filename
 from football_stats_free import FootballAPIClient
 from slip_analyzer import BettingSlipAnalyzer
+import concurrent.futures
 
 app = Flask(__name__)
 
@@ -299,6 +301,14 @@ with open(os.path.join(templates_folder, 'results.html'), 'w') as f:
 with open(os.path.join(static_folder, 'style.css'), 'w') as f:
     f.write(css_content)
 
+# Setup logging
+log_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'app.log')
+logging.basicConfig(
+    filename=log_path,
+    level=logging.INFO,
+    format='%(asctime)s %(levelname)s %(message)s'
+)
+
 def allowed_file(filename):
     """Check if filename has an allowed extension."""
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in app.config['ALLOWED_EXTENSIONS']
@@ -321,55 +331,55 @@ def uploaded_file(filename):
 
 @app.route('/analyze', methods=['POST'])
 def upload_slip():
-    """Handle file upload and analysis."""
-    # Check if file was uploaded
+    logging.info('--- Received analyze request ---')
     if 'slip_image' not in request.files:
+        logging.warning('No file part in request')
         return render_template('index.html', error='No file selected')
-    
     file = request.files['slip_image']
-    
-    # Check if file was selected
     if file.filename == '':
+        logging.warning('No file selected')
         return render_template('index.html', error='No file selected')
-    
-    # Check if file is allowed
     if not allowed_file(file.filename):
+        logging.warning('Invalid file type')
         return render_template('index.html', error='Invalid file type. Only jpg, jpeg, png and gif allowed')
-    
-    # Get lookback parameter
     lookback = int(request.form.get('lookback', 10))
-    
-    # Save the file with a secure name
     unique_filename = str(uuid.uuid4()) + '_' + secure_filename(file.filename)
     file_path = os.path.join(app.config['UPLOAD_FOLDER'], unique_filename)
     file.save(file_path)
-    
-    # Initialize API client
+    logging.info(f'File saved to {file_path}')
     api_client = FootballAPIClient()
-    
-    # Initialize analyzer
     analyzer = BettingSlipAnalyzer(api_client)
-    
     try:
-        # Extract text from image
-        text = analyzer.extract_text_from_image(file_path)
-        
-        # Parse betting slip to get selections
-        selections = analyzer.parse_betting_slip(text)
-        
-        # Analyze selections
-        analysis_results = analyzer.analyze_selections(selections, lookback)
-        
-        # Generate reports
+        ANALYSIS_TIMEOUT = 30
+        def extract_and_analyze():
+            logging.info('Starting OCR extraction...')
+            text = analyzer.extract_text_from_image(file_path)
+            logging.info('OCR extraction done.')
+            logging.info('Parsing betting slip...')
+            selections = analyzer.parse_betting_slip(text)
+            logging.info(f'Parsed selections: {selections}')
+            if not selections:
+                logging.warning('No valid selections found after parsing.')
+                return None, 'No valid selections found in the image. Please upload a clearer slip.'
+            logging.info('Analyzing selections...')
+            analysis_results = analyzer.analyze_selections(selections, lookback)
+            logging.info('Analysis complete.')
+            return analysis_results, None
+        with concurrent.futures.ThreadPoolExecutor() as executor:
+            future = executor.submit(extract_and_analyze)
+            try:
+                analysis_results, error = future.result(timeout=ANALYSIS_TIMEOUT)
+                if error:
+                    logging.error(f'Analysis error: {error}')
+                    return render_template('index.html', error=error)
+            except concurrent.futures.TimeoutError:
+                logging.error('Analysis timed out.')
+                return render_template('index.html', error='Analysis timed out. Please try a different image or try again later.')
         reports = analyzer.generate_report(analysis_results)
-        
-        # Get the visualization image name (the chart)
         viz_image = os.path.basename(reports['viz'])
-        
-        # Add a helper function for the template to determine if a bet would win
         for analysis in analysis_results['analyses']:
             analysis['bet_would_win'] = lambda match, bet_type=analysis['bet_type']: analyzer._bet_would_win(match, bet_type)
-        
+        logging.info('Rendering results page.')
         return render_template(
             'results.html',
             summary=analysis_results['summary'],
@@ -377,9 +387,50 @@ def upload_slip():
             uploaded_file=unique_filename,
             viz_image=viz_image
         )
-    
     except Exception as e:
-        return render_template('index.html', error=f'Error during analysis: {str(e)}')
+        error_message = f'Error during analysis: {str(e)}'
+        logging.exception(error_message)
+        return render_template('index.html', error='An error occurred during analysis. Please check your image and try again. If the problem persists, contact support.')
+
+@app.route('/batch_analyze', methods=['POST'])
+def batch_analyze():
+    logging.info('--- Received batch analyze request ---')
+    if 'slip_images' not in request.files:
+        logging.warning('No files part in request')
+        return render_template('index.html', error='No files selected for batch analysis')
+    files = request.files.getlist('slip_images')
+    if not files or all(f.filename == '' for f in files):
+        logging.warning('No files selected')
+        return render_template('index.html', error='No files selected for batch analysis')
+    lookback = int(request.form.get('lookback', 10)) if 'lookback' in request.form else 10
+    api_client = FootballAPIClient()
+    analyzer = BettingSlipAnalyzer(api_client)
+    results = []
+    filenames = []
+    def process_one(file):
+        unique_filename = str(uuid.uuid4()) + '_' + secure_filename(file.filename)
+        file_path = os.path.join(app.config['UPLOAD_FOLDER'], unique_filename)
+        file.save(file_path)
+        logging.info(f'Batch: File saved to {file_path}')
+        try:
+            text = analyzer.extract_text_from_image(file_path)
+            selections = analyzer.parse_betting_slip(text)
+            if not selections:
+                return {'filename': unique_filename, 'error': 'No valid selections found.'}
+            analysis_results = analyzer.analyze_selections(selections, lookback)
+            report_paths = analyzer.generate_report(analysis_results)
+            return {
+                'filename': unique_filename,
+                'summary': analysis_results['summary'],
+                'analyses': analysis_results['analyses'],
+                'viz_image': os.path.basename(report_paths['viz'])
+            }
+        except Exception as e:
+            logging.exception(f'Batch: Error processing {file.filename}')
+            return {'filename': unique_filename, 'error': str(e)}
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        batch_results = list(executor.map(process_one, files))
+    return render_template('batch_results.html', batch_results=batch_results)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)

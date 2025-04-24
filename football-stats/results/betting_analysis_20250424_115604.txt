@@ -1,0 +1,40 @@
+===== BETTING SLIP ANALYSIS =====
+Generated: 2025-04-24 11:56:04
+
+===== SUMMARY =====
+Total Selections: 10
+Successful Selections: 0
+Unsuccessful Selections: 0
+Average Success Rate: 0.0%
+
+===== SELECTION ANALYSES =====
+Selection 1: Unknown Match - Over 2.5
+  Error: Could not parse team names
+
+Selection 2: Unknown Match - Away Win
+  Error: Could not parse team names
+
+Selection 3: Unknown Match - Draw
+  Error: Could not parse team names
+
+Selection 4: Unknown Match - Over 2.5
+  Error: Could not parse team names
+
+Selection 5: Unknown Match - Away Win
+  Error: Could not parse team names
+
+Selection 6: Unknown Match - Draw
+  Error: Could not parse team names
+
+Selection 7: Unknown Match - Draw
+  Error: Could not parse team names
+
+Selection 8: Unknown Match - Over 2.5
+  Error: Could not parse team names
+
+Selection 9: Unknown Match - Away Win
+  Error: Could not parse team names
+
+Selection 10: Unknown Match - Draw
+  Error: Could not parse team names
+

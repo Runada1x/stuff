@@ -1,0 +1,16 @@
+Create Event Event Title Guest Check-in Attendee
+i Event Title
+
+Event Title
+
+| Guest Name
+Date Ll
+
+| Guest Name
+watin Checked in successfully
+
+| Guest Name
+
+| Guest Name
+
+Create |

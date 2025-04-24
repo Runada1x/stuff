@@ -1,7 +1,7 @@
 requests==2.31.0
 python-dotenv==1.0.0
 # Image processing and OCR
-pillow==10.2.0
+pillow>=10.2.0
 pytesseract==0.3.10
 opencv-python==4.9.0.80
 # Data analysis and visualization

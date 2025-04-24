@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Betting Slip Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Betting Slip Analyzer</h1>
+        <p>Upload a photo of your betting slip to analyze historical performance of your selections</p>
+        
+        {% if error %}
+        <div class="error">{{ error }}</div>
+        {% endif %}
+        
+        <form action="{{ url_for('upload_slip') }}" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="slip_image">Betting Slip Image:</label>
+                <input type="file" id="slip_image" name="slip_image" accept="image/*" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="lookback">Historical Games to Analyze:</label>
+                <select id="lookback" name="lookback">
+                    <option value="5">Last 5 matches</option>
+                    <option value="10" selected>Last 10 matches</option>
+                    <option value="15">Last 15 matches</option>
+                    <option value="20">Last 20 matches</option>
+                </select>
+            </div>
+            
+            <button type="submit">Analyze Slip</button>
+        </form>
+        
+        <div class="footer">
+            <p>Powered by Football Stats API</p>
+        </div>
+    </div>
+</body>
+</html>

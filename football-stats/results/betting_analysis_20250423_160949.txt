@@ -1,0 +1,277 @@
+===== BETTING SLIP ANALYSIS =====
+Generated: 2025-04-23 16:03:18
+
+===== SUMMARY =====
+Total Selections: 43
+Successful Selections: 2
+Unsuccessful Selections: 31
+Average Success Rate: 4.7%
+
+===== SELECTION ANALYSES =====
+Selection 1: Unknown Match - 2+
+  Error: Could not parse team names
+
+Selection 2: Unknown Match - Player Shots
+  Error: Could not parse team names
+
+Selection 3: Unknown Match - Player Fouls
+  Error: Could not parse team names
+
+Selection 4: Unknown Match - Player Shots
+  Error: Could not parse team names
+
+Selection 5: Unknown Match - 1¢ shots
+  Error: Could not parse team names
+
+Selection 6: Unknown Match - 1+
+  Error: Could not parse team names
+
+Selection 7: Unknown Match - Player Shots
+  Error: Could not parse team names
+
+Selection 8: Unknown Match - Player Fouls
+  Error: Could not parse team names
+
+Selection 9: Unknown Match - Player Shots
+  Error: Could not parse team names
+
+Selection 10: Unknown Match - 1
+  Error: Could not parse team names
+
+Selection 11: arsanal vs crystal - Away Win
+  Success Rate: 20.0%
+  Historical Matches:
+    2024-05-19: Aston Villa 5-0
+    2024-05-11: Wolves 1-3
+    2024-05-06: Manchester United 4-0
+    2024-04-27: Fulham 1-1
+    2024-04-24: Newcastle 2-0
+
+Selection 12: arsanal vs crystal - 2+
+  Success Rate: 0.0%
+  Historical Matches:
+    2024-05-19: Aston Villa 5-0
+    2024-05-11: Wolves 1-3
+    2024-05-06: Manchester United 4-0
+    2024-04-27: Fulham 1-1
+    2024-04-24: Newcastle 2-0
+
+Selection 13: arsanal vs crystal - Player Tackles
+  Success Rate: 0.0%
+  Historical Matches:
+    2024-05-19: Aston Villa 5-0
+    2024-05-11: Wolves 1-3
+    2024-05-06: Manchester United 4-0
+    2024-04-27: Fulham 1-1
+    2024-04-24: Newcastle 2-0
+
+Selection 14: arsanal vs crystal - Player Tackles
+  Success Rate: 0.0%
+  Historical Matches:
+    2024-05-19: Aston Villa 5-0
+    2024-05-11: Wolves 1-3
+    2024-05-06: Manchester United 4-0
+    2024-04-27: Fulham 1-1
+    2024-04-24: Newcastle 2-0
+
+Selection 15: arsanal vs crystal - Player Shots
+  Success Rate: 0.0%
+  Historical Matches:
+    2024-05-19: Aston Villa 5-0
+    2024-05-11: Wolves 1-3
+    2024-05-06: Manchester United 4-0
+    2024-04-27: Fulham 1-1
+    2024-04-24: Newcastle 2-0
+
+Selection 16: arsanal vs crystal - Player Shots
+  Success Rate: 0.0%
+  Historical Matches:
+    2024-05-19: Aston Villa 5-0
+    2024-05-11: Wolves 1-3
+    2024-05-06: Manchester United 4-0
+    2024-04-27: Fulham 1-1
+    2024-04-24: Newcastle 2-0
+
+Selection 17: arsanal vs crystal - Home Win
+  Success Rate: 60.0%
+  Historical Matches:
+    2024-05-19: Aston Villa 5-0
+    2024-05-11: Wolves 1-3
+    2024-05-06: Manchester United 4-0
+    2024-04-27: Fulham 1-1
+    2024-04-24: Newcastle 2-0
+
+Selection 18: arsanal vs crystal - Player Fouls
+  Success Rate: 0.0%
+  Historical Matches:
+    2024-05-19: Aston Villa 5-0
+    2024-05-11: Wolves 1-3
+    2024-05-06: Manchester United 4-0
+    2024-04-27: Fulham 1-1
+    2024-04-24: Newcastle 2-0
+
+Selection 19: arsanal vs crystal - Player Shots
+  Success Rate: 0.0%
+  Historical Matches:
+    2024-05-19: Aston Villa 5-0
+    2024-05-11: Wolves 1-3
+    2024-05-06: Manchester United 4-0
+    2024-04-27: Fulham 1-1
+    2024-04-24: Newcastle 2-0
+
+Selection 20: arsanal vs crystal - Player Shots
+  Success Rate: 0.0%
+  Historical Matches:
+    2024-05-19: Aston Villa 5-0
+    2024-05-11: Wolves 1-3
+    2024-05-06: Manchester United 4-0
+    2024-04-27: Fulham 1-1
+    2024-04-24: Newcastle 2-0
+
+Selection 21: arsanal vs crystal - Home Win
+  Success Rate: 60.0%
+  Historical Matches:
+    2024-05-19: Aston Villa 5-0
+    2024-05-11: Wolves 1-3
+    2024-05-06: Manchester United 4-0
+    2024-04-27: Fulham 1-1
+    2024-04-24: Newcastle 2-0
+
+Selection 22: arsanal vs crystal - Player Shots
+  Success Rate: 0.0%
+  Historical Matches:
+    2024-05-19: Aston Villa 5-0
+    2024-05-11: Wolves 1-3
+    2024-05-06: Manchester United 4-0
+    2024-04-27: Fulham 1-1
+    2024-04-24: Newcastle 2-0
+
+Selection 23: arsanal vs crystal - 1
+  Success Rate: 0.0%
+  Historical Matches:
+    2024-05-19: Aston Villa 5-0
+    2024-05-11: Wolves 1-3
+    2024-05-06: Manchester United 4-0
+    2024-04-27: Fulham 1-1
+    2024-04-24: Newcastle 2-0
+
+Selection 24: arsanal vs crystal - Player Shots
+  Success Rate: 0.0%
+  Historical Matches:
+    2024-05-19: Aston Villa 5-0
+    2024-05-11: Wolves 1-3
+    2024-05-06: Manchester United 4-0
+    2024-04-27: Fulham 1-1
+    2024-04-24: Newcastle 2-0
+
+Selection 25: arsanal vs crystal - BTTS
+  Success Rate: 40.0%
+  Historical Matches:
+    2024-05-19: Aston Villa 5-0
+    2024-05-11: Wolves 1-3
+    2024-05-06: Manchester United 4-0
+    2024-04-27: Fulham 1-1
+    2024-04-24: Newcastle 2-0
+
+Selection 26: arsanal vs crystal - BTTS
+  Success Rate: 0.0%
+  Historical Matches:
+
+Selection 27: arsanal vs crystal - Draw
+  Success Rate: 0.0%
+  Historical Matches:
+
+Selection 28: arsanal vs crystal - Away Win
+  Success Rate: 0.0%
+  Historical Matches:
+
+Selection 29: arsanal vs crystal - Player Tackles
+  Success Rate: 0.0%
+  Historical Matches:
+    2024-05-19: Aston Villa 5-0
+    2024-05-11: Wolves 1-3
+    2024-05-06: Manchester United 4-0
+    2024-04-27: Fulham 1-1
+    2024-04-24: Newcastle 2-0
+
+Selection 30: arsanal vs crystal - Player Tackles
+  Success Rate: 0.0%
+  Historical Matches:
+    2024-05-19: Aston Villa 5-0
+    2024-05-11: Wolves 1-3
+    2024-05-06: Manchester United 4-0
+    2024-04-27: Fulham 1-1
+    2024-04-24: Newcastle 2-0
+
+Selection 31: arsanal vs crystal - Player Shots
+  Success Rate: 0.0%
+  Historical Matches:
+
+Selection 32: arsanal vs crystal - Player Shots
+  Success Rate: 0.0%
+  Historical Matches:
+
+Selection 33: arsanal vs crystal - Home Win
+  Success Rate: 0.0%
+  Historical Matches:
+
+Selection 34: arsanal vs crystal - Player Fouls
+  Success Rate: 0.0%
+  Historical Matches:
+    2024-05-19: Aston Villa 5-0
+    2024-05-11: Wolves 1-3
+    2024-05-06: Manchester United 4-0
+    2024-04-27: Fulham 1-1
+    2024-04-24: Newcastle 2-0
+
+Selection 35: arsanal vs crystal - Player Shots
+  Success Rate: 0.0%
+  Historical Matches:
+    2024-05-19: Aston Villa 5-0
+    2024-05-11: Wolves 1-3
+    2024-05-06: Manchester United 4-0
+    2024-04-27: Fulham 1-1
+    2024-04-24: Newcastle 2-0
+
+Selection 36: arsanal vs crystal - Player Shots
+  Success Rate: 0.0%
+  Historical Matches:
+
+Selection 37: arsanal vs crystal - Home Win
+  Success Rate: 0.0%
+  Historical Matches:
+
+Selection 38: arsanal vs crystal - Player Shots
+  Success Rate: 0.0%
+  Historical Matches:
+
+Selection 39: arsanal vs crystal - 1
+  Success Rate: 0.0%
+  Historical Matches:
+    2024-05-19: Aston Villa 5-0
+    2024-05-11: Wolves 1-3
+    2024-05-06: Manchester United 4-0
+    2024-04-27: Fulham 1-1
+    2024-04-24: Newcastle 2-0
+
+Selection 40: arsanal vs crystal - Player Shots
+  Success Rate: 0.0%
+  Historical Matches:
+    2024-05-19: Aston Villa 5-0
+    2024-05-11: Wolves 1-3
+    2024-05-06: Manchester United 4-0
+    2024-04-27: Fulham 1-1
+    2024-04-24: Newcastle 2-0
+
+Selection 41: arsanal vs crystal - BTTS
+  Success Rate: 0.0%
+  Historical Matches:
+
+Selection 42: arsanal vs crystal - BTTS
+  Success Rate: 0.0%
+  Historical Matches:
+
+Selection 43: arsanal vs crystal - Draw
+  Success Rate: 0.0%
+  Historical Matches:
+

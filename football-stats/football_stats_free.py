@@ -4,6 +4,7 @@ import json
 from dotenv import load_dotenv
 from datetime import datetime, timedelta
 import time
+import concurrent.futures
 
 # Load environment variables from .env file
 load_dotenv()
@@ -127,7 +128,8 @@ class FootballAPIClient:
         self._rate_limit_request()
         
         try:
-            response = requests.get(url, headers=self.headers, params=params)
+            # Add a timeout to prevent hanging requests
+            response = requests.get(url, headers=self.headers, params=params, timeout=10)
             self.debug_print(f"Response status: {response.status_code}")
             
             if response.status_code != 200:
@@ -143,6 +145,12 @@ class FootballAPIClient:
             
             return data
             
+        except requests.exceptions.Timeout:
+            self.debug_print("Request timed out")
+            return {"error": "API request timed out. Please try again later."}
+        except requests.exceptions.ConnectionError:
+            self.debug_print("Connection error")
+            return {"error": "Could not connect to the API. Please check your internet connection."}
         except Exception as e:
             self.debug_print(f"Request failed: {str(e)}")
             return {"error": str(e)}
@@ -368,6 +376,51 @@ class FootballAPIClient:
             })
             
         return table
+
+    def batch_get_team_fixtures(self, team_ids, limit=10):
+        """
+        Fetch fixtures for multiple teams in parallel.
+        Args:
+            team_ids: List of team IDs
+            limit: Number of fixtures per team
+        Returns:
+            Dict mapping team_id to fixtures list
+        """
+        results = {}
+        with concurrent.futures.ThreadPoolExecutor() as executor:
+            future_to_team = {
+                executor.submit(self.get_team_fixtures, team_id, limit): team_id
+                for team_id in team_ids
+            }
+            for future in concurrent.futures.as_completed(future_to_team):
+                team_id = future_to_team[future]
+                try:
+                    results[team_id] = future.result()
+                except Exception as e:
+                    results[team_id] = []
+        return results
+
+    def batch_get_players_info(self, team_ids):
+        """
+        Fetch player info for multiple teams in parallel.
+        Args:
+            team_ids: List of team IDs
+        Returns:
+            Dict mapping team_id to player info list
+        """
+        results = {}
+        with concurrent.futures.ThreadPoolExecutor() as executor:
+            future_to_team = {
+                executor.submit(self.get_players_info, team_id): team_id
+                for team_id in team_ids
+            }
+            for future in concurrent.futures.as_completed(future_to_team):
+                team_id = future_to_team[future]
+                try:
+                    results[team_id] = future.result()
+                except Exception as e:
+                    results[team_id] = []
+        return results
 
 def debug_print(message, data=None, truncate=True):
     """Print debug information if DEBUG is enabled."""

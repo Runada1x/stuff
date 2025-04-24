@@ -1,0 +1,60 @@
+2025-04-24 12:15:25,084 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.9.3.71:5000
+2025-04-24 12:15:25,085 INFO [33mPress CTRL+C to quit[0m
+2025-04-24 12:15:25,086 INFO  * Restarting with stat
+2025-04-24 12:15:26,093 WARNING  * Debugger is active!
+2025-04-24 12:15:26,096 INFO  * Debugger PIN: 101-364-170
+2025-04-24 12:15:39,160 INFO 127.0.0.1 - - [24/Apr/2025 12:15:39] "GET / HTTP/1.1" 200 -
+2025-04-24 12:15:39,537 INFO 127.0.0.1 - - [24/Apr/2025 12:15:39] "GET /static/style.css HTTP/1.1" 200 -
+2025-04-24 12:15:47,823 INFO --- Received analyze request ---
+2025-04-24 12:15:47,829 INFO File saved to C:\Users\OGHENERUNOR\Desktop\stuff\football-stats\uploads\c35a4bda-fb34-4670-b193-6c19a6fe0383_Screenshot_2025-04-23_154528.png
+2025-04-24 12:15:47,835 INFO Starting OCR extraction...
+2025-04-24 12:15:49,363 INFO OCR extraction done.
+2025-04-24 12:15:49,363 INFO Parsing betting slip...
+2025-04-24 12:15:49,367 INFO Parsed selections: [{'player': 'survien timber', 'match': None, 'bet_type': '2+', 'original_text': 'survien timber: 2+'}, {'player': 'ethan nwaneri', 'match': None, 'bet_type': 'Player Shots', 'original_text': 'ethan nwaneri: 1+ shots'}, {'player': 'commit', 'match': None, 'bet_type': 'Player Fouls', 'count': '1+', 'original_text': 'commit 1+ fouls'}, {'player': 'tsmaita sarr', 'match': None, 'bet_type': 'Player Shots', 'original_text': 'tsmaita sarr: 14 shots'}, {'player': 'eddie nketiah', 'match': None, 'bet_type': '1¢ shots', 'original_text': 'eddie nketiah: 1¢ shots'}, {'player': 'martin odegaard', 'match': None, 'bet_type': '1+', 'original_text': 'martin odegaard: 1+'}, {'player': 'ethan nwaneri', 'match': None, 'bet_type': 'Player Shots', 'original_text': 'ethan nwaneri: 1+ shots'}, {'player': 'commit', 'match': None, 'bet_type': 'Player Fouls', 'count': '1+', 'original_text': 'commit 1+ fouls»'}, {'player': 'ismaila sarr', 'match': None, 'bet_type': 'Player Shots', 'original_text': 'ismaila sarr: 14 shots'}, {'player': 'martin odegaard', 'match': None, 'bet_type': '1', 'original_text': 'martin odegaard: 1'}, {'match': 'arsanal vs crystal', 'bet_type': 'Away Win', 'original_text': '29.00'}, {'player': 'a timber', 'match': 'arsanal vs crystal', 'bet_type': '2+', 'original_text': 'a timber: 2+'}, {'match': 'arsanal vs crystal', 'bet_type': 'Player Tackles', 'original_text': 'tackles +'}, {'match': 'arsanal vs crystal', 'bet_type': 'Player Tackles', 'original_text': 'player tackles'}, {'player': 'ethan nwaneri', 'match': 'arsanal vs crystal', 'bet_type': 'Player Shots', 'original_text': 'ethan nwaneri: 1+ shots'}, {'match': 'arsanal vs crystal', 'bet_type': 'Player Shots', 'original_text': 'player shots on target'}, {'match': 'arsanal vs crystal', 'bet_type': 'Home Win', 'original_text': 'commit 1+ fouls»'}, {'match': 'arsanal vs crystal', 'bet_type': 'Player Fouls', 'original_text': 'player fouls committed'}, {'player': 'ismaila sarr', 'match': 'arsanal vs crystal', 'bet_type': 'Player Shots', 'original_text': 'ismaila sarr: 14 shots'}, {'match': 'arsanal vs crystal', 'bet_type': 'Player Shots', 'original_text': 'player shots'}, {'match': 'arsanal vs crystal', 'bet_type': 'Home Win', 'original_text': 'eddie nketiah; 1# shots.'}, {'match': 'arsanal vs crystal', 'bet_type': 'Player Shots', 'original_text': 'player shots'}, {'player': 'martin odegaard', 'match': 'arsanal vs crystal', 'bet_type': '1', 'original_text': 'martin odegaard: 1'}, {'match': 'arsanal vs crystal', 'bet_type': 'Player Shots', 'original_text': 'player shote'}, {'match': 'arsanal vs crystal', 'bet_type': 'BTTS', 'original_text': 'both teams to score'}, {'match': 'arsanal vs crystal', 'bet_type': 'BTTS', 'original_text': 'both teams to score'}, {'match': 'arsanal vs crystal', 'bet_type': 'Draw', 'original_text': '--- next configuration ---'}, {'match': 'arsanal vs crystal', 'bet_type': 'Away Win', 'original_text': 'arsanalvcrystat — 29.00 stake'}, {'match': 'arsanal vs crystal', 'bet_type': 'Player Tackles', 'original_text': 'tackles +'}, {'match': 'arsanal vs crystal', 'bet_type': 'Player Tackles', 'original_text': 'player tackles'}, {'player': 'ethan nwaneri', 'match': 'arsanal vs crystal', 'bet_type': 'Player Shots', 'original_text': 'ethan nwaneri: 1+ shots'}, {'match': 'arsanal vs crystal', 'bet_type': 'Player Shots', 'original_text': 'player shots on target'}, {'match': 'arsanal vs crystal', 'bet_type': 'Home Win', 'original_text': 'commit 1+ fouls»'}, {'match': 'arsanal vs crystal', 'bet_type': 'Player Fouls', 'original_text': 'player fouls committed'}, {'player': 'ismaila sarr', 'match': 'arsanal vs crystal', 'bet_type': 'Player Shots', 'original_text': 'ismaila sarr: 14 shots'}, {'match': 'arsanal vs crystal', 'bet_type': 'Player Shots', 'original_text': 'player shots'}, {'match': 'arsanal vs crystal', 'bet_type': 'Home Win', 'original_text': 'eddie nketiah; 1# shots.'}, {'match': 'arsanal vs crystal', 'bet_type': 'Player Shots', 'original_text': 'player shots'}, {'player': 'martin odegaard', 'match': 'arsanal vs crystal', 'bet_type': '1', 'original_text': 'martin odegaard: 1'}, {'match': 'arsanal vs crystal', 'bet_type': 'Player Shots', 'original_text': 'player shote'}, {'match': 'arsanal vs crystal', 'bet_type': 'BTTS', 'original_text': 'both teams to score'}, {'match': 'arsanal vs crystal', 'bet_type': 'BTTS', 'original_text': 'both teams to score'}, {'match': 'arsanal vs crystal', 'bet_type': 'Draw', 'original_text': '--- next configuration ---'}]
+2025-04-24 12:15:49,367 INFO Analyzing selections...
+2025-04-24 12:16:17,843 ERROR Analysis timed out.
+2025-04-24 12:17:01,422 INFO 127.0.0.1 - - [24/Apr/2025 12:17:01] "GET / HTTP/1.1" 200 -
+2025-04-24 12:17:01,687 INFO 127.0.0.1 - - [24/Apr/2025 12:17:01] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-24 12:17:08,436 INFO --- Received analyze request ---
+2025-04-24 12:17:08,461 INFO File saved to C:\Users\OGHENERUNOR\Desktop\stuff\football-stats\uploads\c995c457-3c09-4cc8-a127-d6efb0f72801_159ccafe-8506-4ea5-95ae-995b3b190ace.png
+2025-04-24 12:17:08,462 INFO Starting OCR extraction...
+2025-04-24 12:17:09,502 INFO OCR extraction done.
+2025-04-24 12:17:09,502 INFO Parsing betting slip...
+2025-04-24 12:17:09,504 INFO Parsed selections: [{'player': 'Liverpool Over', 'match': 'Unknown Match', 'bet_type': 'Over 2.5', 'original_text': 'Liverpool Over 2.5'}, {'player': 'Liverpool Over', 'match': 'Unknown Match', 'bet_type': 'Away Win', 'original_text': 'Liverpool Over 2.5'}, {'player': 'Next Configuration', 'match': 'Unknown Match', 'bet_type': 'Draw', 'original_text': '--- Next Configuration ---'}, {'player': 'Liverpool Over', 'match': 'Unknown Match', 'bet_type': 'Over 2.5', 'original_text': 'Liverpool Over 2.5'}, {'player': 'Liverpool Over', 'match': 'Unknown Match', 'bet_type': 'Away Win', 'original_text': 'Liverpool Over 2.5'}, {'player': 'Next Configuration', 'match': 'Unknown Match', 'bet_type': 'Draw', 'original_text': '--- Next Configuration ---'}, {'player': 'Next Configuration', 'match': 'Unknown Match', 'bet_type': 'Draw', 'original_text': '--- Next Configuration ---'}, {'player': 'Liverpool Over', 'match': 'Unknown Match', 'bet_type': 'Over 2.5', 'original_text': 'Liverpool Over 2.5'}, {'player': 'Liverpool Over', 'match': 'Unknown Match', 'bet_type': 'Away Win', 'original_text': 'Liverpool Over 2.5'}, {'player': 'Next Configuration', 'match': 'Unknown Match', 'bet_type': 'Draw', 'original_text': '--- Next Configuration ---'}]
+2025-04-24 12:17:09,504 INFO Analyzing selections...
+2025-04-24 12:17:09,504 INFO Analysis complete.
+2025-04-24 12:17:10,062 INFO Rendering results page.
+2025-04-24 12:17:10,080 ERROR Error during analysis: '>=' not supported between instances of 'NoneType' and 'float'
+Traceback (most recent call last):
+  File "C:\Users\OGHENERUNOR\Desktop\stuff\football-stats\betting_analyzer_webapp.py", line 383, in upload_slip
+    return render_template(
+        'results.html',
+    ...<3 lines>...
+        viz_image=viz_image
+    )
+  File "C:\Users\OGHENERUNOR\Desktop\stuff\.venv\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\OGHENERUNOR\Desktop\stuff\.venv\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\OGHENERUNOR\Desktop\stuff\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\OGHENERUNOR\Desktop\stuff\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\OGHENERUNOR\Desktop\stuff\football-stats\templates\results.html", line 28, in top-level template code
+    <div class="selection-box {% if analysis.success_rate >= 0.6 %}good{% else %}bad{% endif %}">
+    ^^^^^^^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'NoneType' and 'float'
+2025-04-24 12:17:10,087 INFO 127.0.0.1 - - [24/Apr/2025 12:17:10] "POST /analyze HTTP/1.1" 200 -
+2025-04-24 12:17:10,200 INFO 127.0.0.1 - - [24/Apr/2025 12:17:10] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-24 12:17:18,159 INFO --- Received analyze request ---
+2025-04-24 12:17:18,181 INFO File saved to C:\Users\OGHENERUNOR\Desktop\stuff\football-stats\uploads\f6119e7d-e844-4a4c-a898-84fdaa4c2300_159ccafe-8506-4ea5-95ae-995b3b190ace.png
+2025-04-24 12:17:18,182 INFO Starting OCR extraction...
+2025-04-24 12:17:19,234 INFO OCR extraction done.
+2025-04-24 12:17:19,234 INFO Parsing betting slip...
+2025-04-24 12:17:19,236 INFO Parsed selections: [{'player': 'Liverpool Over', 'match': 'Unknown Match', 'bet_type': 'Over 2.5', 'original_text': 'Liverpool Over 2.5'}, {'player': 'Liverpool Over', 'match': 'Unknown Match', 'bet_type': 'Away Win', 'original_text': 'Liverpool Over 2.5'}, {'player': 'Next Configuration', 'match': 'Unknown Match', 'bet_type': 'Draw', 'original_text': '--- Next Configuration ---'}, {'player': 'Liverpool Over', 'match': 'Unknown Match', 'bet_type': 'Over 2.5', 'original_text': 'Liverpool Over 2.5'}, {'player': 'Liverpool Over', 'match': 'Unknown Match', 'bet_type': 'Away Win', 'original_text': 'Liverpool Over 2.5'}, {'player': 'Next Configuration', 'match': 'Unknown Match', 'bet_type': 'Draw', 'original_text': '--- Next Configuration ---'}, {'player': 'Next Configuration', 'match': 'Unknown Match', 'bet_type': 'Draw', 'original_text': '--- Next Configuration ---'}, {'player': 'Liverpool Over', 'match': 'Unknown Match', 'bet_type': 'Over 2.5', 'original_text': 'Liverpool Over 2.5'}, {'player': 'Liverpool Over', 'match': 'Unknown Match', 'bet_type': 'Away Win', 'original_text': 'Liverpool Over 2.5'}, {'player': 'Next Configuration', 'match': 'Unknown Match', 'bet_type': 'Draw', 'original_text': '--- Next Configuration ---'}]
+2025-04-24 12:17:19,236 INFO Analyzing selections...
+2025-04-24 12:17:19,237 INFO Analysis complete.

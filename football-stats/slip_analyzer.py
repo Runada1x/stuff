@@ -11,14 +11,23 @@ from tabulate import tabulate
 import json
 from typing import List, Dict, Any, Tuple
 
-# Check if running in a typical desktop environment or server
+# Set the path to the Tesseract executable
+# For Windows, default installation path is usually C:\Program Files\Tesseract-OCR\tesseract.exe
 try:
-    # For desktop environments
-    pytesseract.pytesseract.tesseract_cmd = pytesseract.pytesseract.tesseract_cmd
+    # Check if tesseract is already in PATH
+    pytesseract.pytesseract.tesseract_cmd = 'tesseract'
+    # Test if it works
+    pytesseract.get_tesseract_version()
 except Exception:
-    # For server environments, specify path
-    # Modify this path as needed for your environment
-    pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
+    # If not found in PATH, try common installation locations
+    windows_path = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+    if os.path.exists(windows_path):
+        pytesseract.pytesseract.tesseract_cmd = windows_path
+    else:
+        # Prompt error message
+        print("ERROR: Tesseract is not installed or not in your PATH.")
+        print("Please install Tesseract OCR from: https://github.com/UB-Mannheim/tesseract/wiki")
+        print("Make sure to check 'Add to PATH' during installation.")
 
 # Data directory structure
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -44,7 +53,7 @@ class BettingSlipAnalyzer:
         self.api_client = api_client
         # Common betting types and their variations in text
         self.bet_types = {
-            'BTTS': ['btts', 'both teams to score', 'both to score', 'gole oba tima'],
+            'BTTS': ['btts', 'both teams to score', 'both to score', 'gole oba tima', 'both teams'],
             'Over 2.5': ['over 2.5', 'over 2,5', 'preko 2.5', 'o2.5', 'o 2.5'],
             'Under 2.5': ['under 2.5', 'under 2,5', 'ispod 2.5', 'u2.5', 'u 2.5'],
             'Home Win': ['1', 'home', 'home win', 'pobeda domaćin', 'pobjeda domacin'],
@@ -53,7 +62,12 @@ class BettingSlipAnalyzer:
             'Double Chance 1X': ['1x', 'home draw', 'double chance 1x'],
             'Double Chance X2': ['x2', 'away draw', 'double chance x2'],
             'First Half Over 0.5': ['fh over 0.5', 'first half over 0.5', '1h o0.5'],
-            'Clean Sheet': ['clean sheet', 'cs', 'without conceding']
+            'Clean Sheet': ['clean sheet', 'cs', 'without conceding'],
+            # Add player prop bet types
+            'Player Shots': ['shots', 'shot', '1\\+ shots', '2\\+ shots', 'shots on target', '1\\+ shots on target'],
+            'Player Tackles': ['tackles', 'tackle', '1\\+ tackles', '2\\+ tackles'],
+            'Player Fouls': ['fouls', 'foul', '1\\+ fouls', '2\\+ fouls', 'fouls committed'],
+            'Player Cards': ['card', 'cards', 'yellow card', 'red card']
         }
         
         # Team name variations (common misspellings or short names)
@@ -64,6 +78,7 @@ class BettingSlipAnalyzer:
             'liverpool': ['liverpool', 'liv', 'liverpool fc', 'the reds'],
             'chelsea': ['chelsea', 'che', 'chelsea fc', 'the blues'],
             'tottenham': ['tottenham', 'spurs', 'tottenham hotspur', 'tot'],
+            'crystal palace': ['crystal palace', 'palace', 'c palace', 'cp'],
             # Add more teams as needed
         }
     
@@ -85,31 +100,43 @@ class BettingSlipAnalyzer:
         # Convert to grayscale
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         
-        # Apply thresholding
-        _, threshold = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+        # Apply thresholding with different parameters for better OCR
+        _, threshold1 = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
         
-        # Noise removal and enhancement
-        kernel = np.ones((1, 1), np.uint8)
-        threshold = cv2.dilate(threshold, kernel, iterations=1)
-        threshold = cv2.erode(threshold, kernel, iterations=1)
-        
-        # Apply adaptive thresholding
+        # Apply adaptive thresholding - this often works better for varied lighting
         adaptive_threshold = cv2.adaptiveThreshold(
             gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2
         )
         
-        # Save the preprocessed image
-        preprocessed_path = os.path.join(
+        # Try a different parameter set for adaptive thresholding
+        adaptive_threshold2 = cv2.adaptiveThreshold(
+            gray, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 15, 5
+        )
+        
+        # Noise removal and enhancement
+        kernel = np.ones((1, 1), np.uint8)
+        threshold1 = cv2.dilate(threshold1, kernel, iterations=1)
+        threshold1 = cv2.erode(threshold1, kernel, iterations=1)
+        
+        # Save all preprocessed versions
+        preprocessed_path_base = os.path.join(
             PROCESSED_DIR, 
             f"preprocessed_{os.path.basename(image_path)}"
         )
-        cv2.imwrite(preprocessed_path, threshold)
         
-        return threshold
+        # Save the preprocessed images with different methods
+        cv2.imwrite(preprocessed_path_base.replace('.', '_thresh1.'), threshold1)
+        cv2.imwrite(preprocessed_path_base.replace('.', '_adaptive1.'), adaptive_threshold)
+        cv2.imwrite(preprocessed_path_base.replace('.', '_adaptive2.'), adaptive_threshold2)
+        
+        # Main preprocessed image to return
+        cv2.imwrite(preprocessed_path_base, threshold1)
+        
+        return threshold1
     
     def extract_text_from_image(self, image_path: str) -> str:
         """
-        Extract text from betting slip image using OCR.
+        Extract text from betting slip image using OCR with multiple configurations.
         
         Args:
             image_path: Path to the image file
@@ -120,81 +147,191 @@ class BettingSlipAnalyzer:
         # Preprocess the image
         preprocessed = self.preprocess_image(image_path)
         
-        # Extract text using Tesseract
-        config = '--psm 6 --oem 3'  # Page segmentation mode 6: Assume single uniform block of text
-        text = pytesseract.image_to_string(preprocessed, config=config)
+        # Try multiple OCR configurations for better results
+        config_options = [
+            '--psm 6 --oem 3',  # Assume a single uniform block of text
+            '--psm 4 --oem 3',  # Assume a single column of text
+            '--psm 11 --oem 3', # Sparse text. Find as much text as possible without assuming a particular structure
+            '--psm 3 --oem 3'   # Fully automatic page segmentation, but no OSD (default)
+        ]
         
+        all_text = ""
+        for config in config_options:
+            text = pytesseract.image_to_string(preprocessed, config=config)
+            if text:  # Only add non-empty text
+                all_text += text + "\n\n--- Next Configuration ---\n\n"
+        
+        # If no text was extracted, return a message rather than empty string
+        if not all_text.strip():
+            all_text = "No text could be extracted from the image."
+            
         # Save extracted text for debugging
         text_file_path = os.path.join(
             PROCESSED_DIR, 
             f"text_{os.path.basename(image_path).split('.')[0]}.txt"
         )
         with open(text_file_path, 'w', encoding='utf-8') as f:
-            f.write(text)
-            
-        return text
+            f.write(all_text)
+        
+        return all_text
     
     def parse_betting_slip(self, text: str) -> List[Dict[str, Any]]:
         """
-        Parse the extracted text to identify matches and bet types.
+        Parse the extracted text to identify matches, players, and bet types.
         
         Args:
             text: Extracted text from the betting slip
             
         Returns:
-            List of dictionaries containing match details and bet types
+            List of dictionaries containing match/player details and bet types
         """
-        # Split into lines
-        lines = [line.strip() for line in text.split('\n') if line.strip()]
+        # Return empty list if text is None or empty
+        if not text or not text.strip():
+            print("Warning: No text provided for parsing")
+            return []
+            
+        # Split into lines and filter empty ones
+        lines = [line.strip() for line in text.split('\n') if line and line.strip()]
         
+        # If no valid lines, return empty selections
+        if not lines:
+            print("Warning: No valid lines found in text")
+            return []
+            
         selections = []
         current_match = None
+        current_player = None
         current_bet_type = None
         
-        for line in lines:
+        # Look for team names first to establish match context
+        for i, line in enumerate(lines):
+            # Skip if line is None or empty
+            if not line or not line.strip():
+                continue
+                
             line = line.lower()  # Convert to lowercase for easier matching
             
-            # Check for team names (this is simplistic and might need refinement)
+            # Check for match pattern (Team vs Team)
             teams_found = self._find_teams(line)
             if teams_found:
-                # Found possible team names, likely a match
                 home_team, away_team = teams_found
                 current_match = f"{home_team} vs {away_team}"
+                continue
             
-            # Check for bet types
+            # Look for player name followed by a colon (typical format for player props)
+            # Pattern: Player Name: Bet Type
+            player_bet_match = re.search(r'([a-z\s\-]+)\s*:\s*(.+)', line)
+            if player_bet_match:
+                player_name = player_bet_match.group(1).strip()
+                bet_description = player_bet_match.group(2).strip()
+                
+                # Identify the bet type
+                bet_type = self._identify_player_bet_type(bet_description)
+                
+                if bet_type:
+                    selections.append({
+                        'player': player_name,
+                        'match': current_match,  # This might be None if no match context was found
+                        'bet_type': bet_type,
+                        'original_text': f"{player_name}: {bet_description}"
+                    })
+                    continue
+            
+            # Look for standalone bet types
             bet_type_found = self._find_bet_type(line)
-            if bet_type_found:
-                current_bet_type = bet_type_found
-            
-            # If we have both a match and a bet type, add a selection
-            if current_match and current_bet_type:
+            if bet_type_found and current_match:
                 selections.append({
                     'match': current_match,
-                    'bet_type': current_bet_type,
+                    'bet_type': bet_type_found,
                     'original_text': line
                 })
-                # Reset for next selection
-                current_match = None
-                current_bet_type = None
+                continue
+                
+            # Additional patterns: Check for player shots, tackles, fouls format
+            player_prop_match = re.search(r'([a-z\s\-]+)\s+(\d+\+)\s+(shots|tackles|fouls|cards)', line, re.IGNORECASE)
+            if player_prop_match:
+                player_name = player_prop_match.group(1).strip()
+                count = player_prop_match.group(2).strip()
+                prop_type = player_prop_match.group(3).strip()
+                
+                bet_type = f"Player {prop_type.capitalize()}"
+                
+                selections.append({
+                    'player': player_name,
+                    'match': current_match,
+                    'bet_type': bet_type,
+                    'count': count,
+                    'original_text': line
+                })
+                continue
         
-        # Secondary pass to match orphaned bet types or matches
-        # This helps when layout isn't consistent
+        # If no selections were found with the above methods, try a more aggressive approach
         if not selections:
+            # Look for lines with player names followed by potential bet descriptions
             for i, line in enumerate(lines):
-                if i < len(lines) - 1:
-                    combined = f"{line} {lines[i+1]}".lower()
-                    teams_found = self._find_teams(combined)
-                    bet_type_found = self._find_bet_type(combined)
+                # Skip if line is None or empty
+                if not line or not line.strip():
+                    continue
                     
-                    if teams_found and bet_type_found:
-                        home_team, away_team = teams_found
-                        selections.append({
-                            'match': f"{home_team} vs {away_team}",
-                            'bet_type': bet_type_found,
-                            'original_text': combined
-                        })
+                # Check for player name patterns (capitalized words)
+                name_match = re.search(r'([A-Z][a-z]+\s+[A-Z][a-z]+)', line)
+                if name_match:
+                    player_name = name_match.group(1)
+                    
+                    # Look for bet type indicators in this line or the next
+                    bet_desc = line
+                    if i < len(lines) - 1 and lines[i+1]:
+                        bet_desc += " " + lines[i+1]
+                    
+                    for bet_key, patterns in self.bet_types.items():
+                        for pattern in patterns:
+                            if pattern in bet_desc.lower():
+                                selections.append({
+                                    'player': player_name,
+                                    'match': current_match,
+                                    'bet_type': bet_key,
+                                    'original_text': line
+                                })
+                                break
+        
+        # If there's at least one player prop bet but no match context, set a default
+        if selections and all('player' in s for s in selections) and not any(s.get('match') for s in selections):
+            for s in selections:
+                if not s.get('match'):
+                    s['match'] = "Unknown Match"
         
         return selections
+    
+    def _identify_player_bet_type(self, bet_description: str) -> str:
+        """
+        Identify the type of player prop bet from the description.
+        
+        Args:
+            bet_description: Description of the bet
+            
+        Returns:
+            Standardized bet type name
+        """
+        bet_description = bet_description.lower()
+        
+        # Check for shots
+        if re.search(r'(\d+)\+?\s*shots', bet_description):
+            return "Player Shots"
+        
+        # Check for tackles
+        if re.search(r'(\d+)\+?\s*tackles', bet_description):
+            return "Player Tackles"
+        
+        # Check for fouls
+        if re.search(r'(\d+)\+?\s*fouls', bet_description):
+            return "Player Fouls"
+        
+        # Check for cards
+        if re.search(r'(yellow|red)\s+cards?', bet_description):
+            return "Player Cards"
+        
+        # Generic case
+        return bet_description
     
     def _find_teams(self, text: str) -> Tuple[str, str] or None:
         """
@@ -280,16 +417,24 @@ class BettingSlipAnalyzer:
         }
         
         for selection in selections:
-            match_text = selection['match']
-            bet_type = selection['bet_type']
+            match_text = selection.get('match')
+            bet_type = selection.get('bet_type')
             
+            # Safety check - if match_text or bet_type is None, use defaults
+            if match_text is None:
+                match_text = "Unknown Match"
+            
+            if bet_type is None:
+                bet_type = "Unknown Bet Type"
+                
             # Extract team names
-            match_parts = match_text.split(' vs ')
-            if len(match_parts) != 2:
-                # Try with 'v' instead of 'vs'
+            match_parts = None
+            if ' vs ' in match_text:
+                match_parts = match_text.split(' vs ')
+            elif ' v ' in match_text:
                 match_parts = match_text.split(' v ')
             
-            if len(match_parts) != 2:
+            if match_parts is None or len(match_parts) != 2:
                 analysis = {
                     'match': match_text,
                     'bet_type': bet_type,
@@ -538,42 +683,31 @@ class BettingSlipAnalyzer:
             results: Analysis results
             output_path: Path to save the report
         """
-        html = """
-        <!DOCTYPE html>
-        <html>
-        <head>
-            <title>Betting Slip Analysis</title>
-            <style>
-                body { font-family: Arial, sans-serif; margin: 20px; }
-                h1, h2 { color: #2c3e50; }
-                .summary { background-color: #f8f9fa; padding: 15px; border-radius: 5px; }
-                .selection { margin-bottom: 20px; border: 1px solid #ddd; padding: 15px; border-radius: 5px; }
-                .good { background-color: #d4edda; }
-                .bad { background-color: #f8d7da; }
-                table { border-collapse: collapse; width: 100%; }
-                th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-                th { background-color: #f2f2f2; }
-            </style>
-        </head>
-        <body>
-            <h1>Betting Slip Analysis</h1>
-            <p>Generated: {generated}</p>
-            
-            <div class="summary">
-                <h2>Summary</h2>
-                <p>Total Selections: {total_selections}</p>
-                <p>Successful Selections: {successful_selections}</p>
-                <p>Unsuccessful Selections: {unsuccessful_selections}</p>
-                <p>Average Success Rate: {avg_success_rate:.1%}</p>
-            </div>
-            
-            <h2>Selection Analyses</h2>
-            {selection_analyses}
-            
-            <p><em>Analysis powered by Football Stats API</em></p>
-        </body>
-        </html>
-        """.format(
+        # Simple HTML with inline styles to avoid any CSS parsing issues
+        html = """<!DOCTYPE html>
+<html>
+<head>
+    <title>Betting Slip Analysis</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 20px;">
+    <h1 style="color: #2c3e50;">Betting Slip Analysis</h1>
+    <p>Generated: {generated}</p>
+    
+    <div style="background-color: #f8f9fa; padding: 15px; border-radius: 5px;">
+        <h2 style="color: #2c3e50;">Summary</h2>
+        <p>Total Selections: {total_selections}</p>
+        <p>Successful Selections: {successful_selections}</p>
+        <p>Unsuccessful Selections: {unsuccessful_selections}</p>
+        <p>Average Success Rate: {avg_success_rate:.1%}</p>
+    </div>
+    
+    <h2 style="color: #2c3e50;">Selection Analyses</h2>
+    {selection_analyses}
+    
+    <p><em>Analysis powered by Football Stats API</em></p>
+</body>
+</html>
+""".format(
             generated=results['generated'],
             total_selections=results['summary']['total_selections'],
             successful_selections=results['summary']['successful_selections'],
@@ -598,12 +732,10 @@ class BettingSlipAnalyzer:
         html = ""
         
         for i, analysis in enumerate(analyses, 1):
-            # Determine if it's a good or bad selection
-            css_class = ""
-            if 'error' not in analysis and analysis['success_rate'] is not None:
-                css_class = "good" if analysis['success_rate'] >= 0.6 else "bad"
+            # Determine background color based on success rate
+            bg_color = "#d4edda" if 'error' not in analysis and analysis.get('success_rate', 0) >= 0.6 else "#f8d7da"
             
-            html += f'<div class="selection {css_class}">'
+            html += f'<div style="margin-bottom: 20px; padding: 15px; border-radius: 5px; background-color: {bg_color}; border: 1px solid #ddd;">'
             html += f'<h3>Selection {i}: {analysis["match"]} - {analysis["bet_type"]}</h3>'
             
             if 'error' in analysis:
@@ -613,8 +745,11 @@ class BettingSlipAnalyzer:
                 
                 # Add historical matches table
                 if analysis['historical_matches']:
-                    html += '<table>'
-                    html += '<tr><th>Date</th><th>Opponent</th><th>Result</th><th>Bet Result</th></tr>'
+                    html += '<table style="border-collapse: collapse; width: 100%;">'
+                    html += '<tr><th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2;">Date</th>'
+                    html += '<th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2;">Opponent</th>'
+                    html += '<th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2;">Result</th>'
+                    html += '<th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2;">Bet Result</th></tr>'
                     
                     for match in analysis['historical_matches']:
                         date = match.get('date', 'Unknown')
@@ -622,14 +757,15 @@ class BettingSlipAnalyzer:
                         opponent = match.get('opponent', 'Unknown')
                         
                         # Check if bet would have won
-                        bet_result = "Win" if self._bet_would_win(match, analysis["bet_type"]) else "Loss"
-                        bet_class = "good" if bet_result == "Win" else "bad"
+                        bet_would_win = self._bet_would_win(match, analysis["bet_type"])
+                        bet_result = "Win" if bet_would_win else "Loss"
+                        bet_color = "#2ecc71" if bet_would_win else "#e74c3c"
                         
                         html += f'<tr>'
-                        html += f'<td>{date}</td>'
-                        html += f'<td>{opponent}</td>'
-                        html += f'<td>{result}</td>'
-                        html += f'<td class="{bet_class}">{bet_result}</td>'
+                        html += f'<td style="border: 1px solid #ddd; padding: 8px; text-align: left;">{date}</td>'
+                        html += f'<td style="border: 1px solid #ddd; padding: 8px; text-align: left;">{opponent}</td>'
+                        html += f'<td style="border: 1px solid #ddd; padding: 8px; text-align: left;">{result}</td>'
+                        html += f'<td style="border: 1px solid #ddd; padding: 8px; text-align: left; color: {bet_color}; font-weight: bold;">{bet_result}</td>'
                         html += f'</tr>'
                         
                     html += '</table>'

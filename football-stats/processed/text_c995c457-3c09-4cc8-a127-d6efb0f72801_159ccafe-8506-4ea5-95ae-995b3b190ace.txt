@@ -1,0 +1,95 @@
+MATCH SELECTION | opns | STAKE
+Arsenal vs
+Manchester BTTS Yes
+City
+Liverpool Over 2.5
+Chelsea Goals
+Tottenham — Tottenham
+Manchester win
+United
+
+
+--- Next Configuration ---
+
+BETSLIP
+
+SELECTION
+
+MATCH
+
+Arsenal vs
+Manchester BTTS Yes
+
+City
+
+Liverpool Over 2.5
+Chelsea Goals
+
+Tottenham = Tottenham
+Manchester win
+
+United
+
+
+--- Next Configuration ---
+
+BETSLIP
+
+MATCH
+
+SELECTION
+
+STAKE
+
+Arsenal vs
+
+Manchester
+
+BTTS Yes
+
+City
+
+Liverpool
+
+Over 2.5
+
+Chelsea
+
+Goals
+
+Tottenham
+
+Tottenham
+
+Manchester
+
+Win
+
+United
+
+
+--- Next Configuration ---
+
+BETSLIP
+
+SELECTION
+
+MATCH
+
+Arsenal vs
+Manchester BTTS Yes
+
+City
+
+Liverpool Over 2.5
+Chelsea Goals
+
+Tottenham = Tottenham
+Manchester win
+
+United
+
+
+
+--- Next Configuration ---
+

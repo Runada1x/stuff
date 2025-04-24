@@ -1,0 +1,143 @@
+{
+  "selections": [
+    {
+      "player": "Liverpool Over",
+      "match": "Unknown Match",
+      "bet_type": "Over 2.5",
+      "original_text": "Liverpool Over 2.5"
+    },
+    {
+      "player": "Liverpool Over",
+      "match": "Unknown Match",
+      "bet_type": "Away Win",
+      "original_text": "Liverpool Over 2.5"
+    },
+    {
+      "player": "Next Configuration",
+      "match": "Unknown Match",
+      "bet_type": "Draw",
+      "original_text": "--- Next Configuration ---"
+    },
+    {
+      "player": "Liverpool Over",
+      "match": "Unknown Match",
+      "bet_type": "Over 2.5",
+      "original_text": "Liverpool Over 2.5"
+    },
+    {
+      "player": "Liverpool Over",
+      "match": "Unknown Match",
+      "bet_type": "Away Win",
+      "original_text": "Liverpool Over 2.5"
+    },
+    {
+      "player": "Next Configuration",
+      "match": "Unknown Match",
+      "bet_type": "Draw",
+      "original_text": "--- Next Configuration ---"
+    },
+    {
+      "player": "Next Configuration",
+      "match": "Unknown Match",
+      "bet_type": "Draw",
+      "original_text": "--- Next Configuration ---"
+    },
+    {
+      "player": "Liverpool Over",
+      "match": "Unknown Match",
+      "bet_type": "Over 2.5",
+      "original_text": "Liverpool Over 2.5"
+    },
+    {
+      "player": "Liverpool Over",
+      "match": "Unknown Match",
+      "bet_type": "Away Win",
+      "original_text": "Liverpool Over 2.5"
+    },
+    {
+      "player": "Next Configuration",
+      "match": "Unknown Match",
+      "bet_type": "Draw",
+      "original_text": "--- Next Configuration ---"
+    }
+  ],
+  "analyses": [
+    {
+      "match": "Unknown Match",
+      "bet_type": "Over 2.5",
+      "error": "Could not parse team names",
+      "success_rate": null,
+      "historical_matches": []
+    },
+    {
+      "match": "Unknown Match",
+      "bet_type": "Away Win",
+      "error": "Could not parse team names",
+      "success_rate": null,
+      "historical_matches": []
+    },
+    {
+      "match": "Unknown Match",
+      "bet_type": "Draw",
+      "error": "Could not parse team names",
+      "success_rate": null,
+      "historical_matches": []
+    },
+    {
+      "match": "Unknown Match",
+      "bet_type": "Over 2.5",
+      "error": "Could not parse team names",
+      "success_rate": null,
+      "historical_matches": []
+    },
+    {
+      "match": "Unknown Match",
+      "bet_type": "Away Win",
+      "error": "Could not parse team names",
+      "success_rate": null,
+      "historical_matches": []
+    },
+    {
+      "match": "Unknown Match",
+      "bet_type": "Draw",
+      "error": "Could not parse team names",
+      "success_rate": null,
+      "historical_matches": []
+    },
+    {
+      "match": "Unknown Match",
+      "bet_type": "Draw",
+      "error": "Could not parse team names",
+      "success_rate": null,
+      "historical_matches": []
+    },
+    {
+      "match": "Unknown Match",
+      "bet_type": "Over 2.5",
+      "error": "Could not parse team names",
+      "success_rate": null,
+      "historical_matches": []
+    },
+    {
+      "match": "Unknown Match",
+      "bet_type": "Away Win",
+      "error": "Could not parse team names",
+      "success_rate": null,
+      "historical_matches": []
+    },
+    {
+      "match": "Unknown Match",
+      "bet_type": "Draw",
+      "error": "Could not parse team names",
+      "success_rate": null,
+      "historical_matches": []
+    }
+  ],
+  "summary": {
+    "total_selections": 10,
+    "successful_selections": 0,
+    "unsuccessful_selections": 0,
+    "avg_success_rate": 0.0
+  },
+  "generated": "2025-04-24 11:56:04"
+}
